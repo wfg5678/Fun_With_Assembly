@@ -1,4 +1,6 @@
 ;These are the assembly routines for Euler problem 9.
+;x86-64 Instruction Set
+;My machine has Intel i5-6200 Processors
 
 
 global FindTriple
@@ -120,17 +122,20 @@ FindTriple:
 			
 			
 			bottom:
-			add rbx,QWORD 1				;increment the loop2 counter
+
+			;increment the loop2 counter
+			add rbx,QWORD 1			
 			cmp rbx,QWORD 500					
 			jl loop2_top
 		
 
-	
-		add rcx,QWORD 1					;increment the loop1 counter
+		;increment the loop1 counter
+		add rcx,QWORD 1					
 		cmp rcx,QWORD 500
 		jl loop1_top
 	
-	mov rax,0							;return 0 if routine cannot find an appropriate triple
+	;return 0 if routine cannot find an appropriate triple
+	mov rax,0							
 			
 	return_answer:
 
